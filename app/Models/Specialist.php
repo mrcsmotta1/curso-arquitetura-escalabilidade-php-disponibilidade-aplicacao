@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 
 class Specialist extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory;
+    use HasUuids;
 
     protected $fillable = ['name', 'crm', 'specialty', 'email'];
 
