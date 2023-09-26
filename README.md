@@ -45,3 +45,13 @@ Muitos dados serão criados (1000 especialistas com 1000 avaliações cada), ent
 ```shell
 docker run --add-host host.docker.internal:host-gateway --rm williamyeh/wrk -c 10 -t 4 -d 10 http://host.docker.internal:8123/api/test
 ```
+
+9. Para executar o squizlabs/php_codesniffer e detectar violações de um conjunto definido de padrões de codificação.
+```shell
+vendor/bin/phpcs --standard=psr12 file
+```
+
+10. Para executar o squizlabs/php_codesniffer e Corrigir automaticamente violações de padrão
+```shell
+vendor/bin/phpcbf --standard=psr12 file
+```
